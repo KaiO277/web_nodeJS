@@ -6,7 +6,7 @@ class CourseController{
 
     //GET /search
     show(req, res){
-        res.render('COURSES TE');
+        res.send('COURSES TE');
     }
 }
 
