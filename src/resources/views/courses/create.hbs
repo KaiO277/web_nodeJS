@@ -2,24 +2,29 @@
     <h3>Đăng khoá học</h3>
 
     <form method="POST" action="/courses/store">
-
+    
         <div class="form-group">
-            <label for="exampleInputEmail1">Tên khoá học</label>
+            <label for="name">Tên khoá học</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên khoá học">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Mô tả</label>
+            <label for="description">Mô tả</label>
             <input type="text" class="form-control" id="description" name="description" placeholder="Nhập mô tả">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Link ảnh</label>
+            <label for="image">Link ảnh</label>
             <input type="text" class="form-control" id="image" name="image" placeholder="Nhập link ảnh khoá học">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Video Id</label>
+            <label for="exampleInputEmail1">Slug</label>
+            <input type="text" class="form-control" id="slug" name="slug" placeholder="Nhập slug">
+        </div>
+        
+        <div class="form-group">
+            <label for="videoId">Video Id</label>
             <input type="text" class="form-control" id="videoId" name="videoId" placeholder="Nhập video id">
         </div>
     

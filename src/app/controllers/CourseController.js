@@ -1,5 +1,6 @@
 const Course = require('../models/Course');
 const { mutipleMongooseToObject, mongooseToObject } = require('../../util/mongoose');
+// app.use(express.urlencoded({ extended: true })); 
 
 class CourseController{
 
@@ -19,7 +20,13 @@ class CourseController{
 
     //POST /store
     store(req, res, next){
+        // const course = new Course(req.body);
+        // course.save();
+
+        // res.send('COURSE saved');
+
         res.json(req.body);
+        
     }
 }
 
