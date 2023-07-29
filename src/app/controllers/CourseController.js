@@ -12,6 +12,11 @@ class CourseController{
             .catch(next);
         // res.send('COURSES TE '+ req.params.slug);
     }
+
+    //GET /create
+    create(res, rep, next){
+        res.render("CREATE COURSE");
+    }
 }
 
 module.exports = new CourseController;
