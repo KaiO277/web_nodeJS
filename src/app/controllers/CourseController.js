@@ -10,12 +10,16 @@ class CourseController{
                 res.render('courses/show', {course: mongooseToObject(course), title: course.name});
             })
             .catch(next);
-        // res.send('COURSES TE '+ req.params.slug);
     }
 
     //GET /create
-    create(res, rep, next){
-        res.render("CREATE COURSE");
+    create(req, res, next){
+        res.render('courses/create');
+    }
+
+    //POST /store
+    store(req, res, next){
+        res.json(req.body);
     }
 }
 
