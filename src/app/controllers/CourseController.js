@@ -20,12 +20,14 @@ class CourseController{
 
     //POST /store
     store(req, res, next){
-        // const course = new Course(req.body);
-        // course.save();
+        const course = new Course(req.body);
+        course.save();
 
-        // res.send('COURSE saved');
+        res.send('COURSE saved');
 
-        res.json(req.body);
+        // console.log(res.json(req.body));
+        // console.log(req.body.name);
+        // res.json(req.body);
         
     }
 }
