@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const slug = require('mongoose-slug-generator');
+
+mongoose.plugin(slug);
+
 const Schema = mongoose.Schema;
 
 const Course = new Schema({
@@ -7,6 +11,7 @@ const Course = new Schema({
     image: { type: String },
     slug: { type: String },
     videoId: { type: String },
+    slug: { type: String, slug: "name", unique: true },
   },{
     timestamps: true,
   });
