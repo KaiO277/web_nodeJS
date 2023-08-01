@@ -14,11 +14,12 @@ const db = require('./config/db');
 db.connect();
 
 //Template engine
-// app.engine('.hbs', handlebars.engine); // Truyền handlebars.engine làm callback function
-// app.set('view engine', '.hbs');
-// app.set('views', path.join(__dirname, 'resources\\views'));
 const hbs = handlebars.create({ extname: '.hbs' }); // Tạo đối tượng handlebars
-app.engine('.hbs', hbs.engine); // Sử dụng hàm engine() của đối tượng handlebars
+hbs.handlebars.registerHelper('sum', (a, b) => a + b);
+app.engine(
+  '.hbs', hbs.engine,
+  
+); // Sử dụng hàm engine() của đối tượng handlebars
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources\\views'));
 

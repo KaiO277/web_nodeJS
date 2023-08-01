@@ -18,19 +18,29 @@ class CourseController{
         res.render('courses/create');
     }
 
+    
     //POST /store
     store(req, res, next){
-        const course = new Course(req.body);
-        
+        const course = new Course(req.body);  
 
         course.save()
             .then(() => res.redirect('/'))
             .catch(error => {
 
             });
+    }
 
+    //GET /courses/:id/edit
+    edit(req, res, next){
+        Course.findById(req.params.id)
+            .then(course => res.render('courses/edit',{
+                title: 'Cập nhật khoá học',
+                course: mongooseToObject(course),
+            }))
+            .catch(next);
         
     }
+
 }
 
-module.exports = new CourseController;
+module.exports = new CourseController();
