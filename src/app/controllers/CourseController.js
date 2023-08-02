@@ -37,8 +37,15 @@ class CourseController{
                 title: 'Cập nhật khoá học',
                 course: mongooseToObject(course),
             }))
-            .catch(next);
-        
+            .catch(next);   
+    }
+
+    //PUT /courses/:id  /update
+    update(req, res, next){
+        // Course.updateOne({_id: req.params._id}, req.body)
+        //     .then(() => res.redirect('/me/stored/courses'))
+        //     .catch(next);
+        res.json(req.body);
     }
 
 }
