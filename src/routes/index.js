@@ -12,10 +12,7 @@ function route(app){
     app.use('/courses', coursesRoute);
     
     app.use('/', siteRoute);
-
-    
-      
-   
+ 
 }
 
 module.exports = route; 
